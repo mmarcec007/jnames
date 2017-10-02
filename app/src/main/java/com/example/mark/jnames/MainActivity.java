@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 if (s.length() != 0) {
                     String currentLetter = Character.toString(s.charAt(start + (count - 1))).toUpperCase();
 
-                    if (before < count) {
+                    if (before < count && LettersConverter.generateLettersMap().containsKey(currentLetter)) {
                         resultName.append(LettersConverter.generateLettersMap().get(currentLetter));
                     }
                 }
