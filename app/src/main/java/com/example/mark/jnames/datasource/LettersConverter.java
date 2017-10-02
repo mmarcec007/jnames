@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class LettersConverter {
 
-    public Map<String, String> generateLettersMap() {
+    public static Map<String, String> generateLettersMap() {
         Map<String, String> map = new HashMap<String, String>();
 
         map.put("A","KA");
