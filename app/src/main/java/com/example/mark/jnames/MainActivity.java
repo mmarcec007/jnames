@@ -7,11 +7,9 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.mark.jnames.datasource.LettersConverter;
+
 public class MainActivity extends AppCompatActivity {
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                resultName.setText(inputName.getText().toString());
+                if (s.length() != 0) {
+                    String currentLetter = Character.toString(s.charAt(start + (count - 1))).toUpperCase();
+
+                    if (before < count) {
+                        resultName.append(LettersConverter.generateLettersMap().get(currentLetter));
+                    }
+                }
+
+                else {
+                    resultName.setText("See your Japanese name: ");
+                }
             }
         });
     }
