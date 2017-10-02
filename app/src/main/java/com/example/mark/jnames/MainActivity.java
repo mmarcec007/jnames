@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mark.jnames.datasource.LettersConverter;
 
@@ -28,10 +29,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // TODO Auto-generated method stub
+                Toast.makeText(getApplicationContext(), Integer.toString(after), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                determineJapaneseName(s, start, before, count);
+            }
+
+            private void determineJapaneseName(CharSequence s, int start, int before, int count) {
                 if (s.length() != 0) {
                     String currentLetter = Character.toString(s.charAt(start + (count - 1))).toUpperCase();
 
