@@ -8,9 +8,10 @@ import java.util.Map;
  */
 
 public class LettersConverter {
-    Map<String, String> map = new HashMap<String, String>();
 
-    public LettersConverter(Map<String, String> map) {
+    public Map<String, String> generateLettersMap() {
+        Map<String, String> map = new HashMap<String, String>();
+
         map.put("A","KA");
         map.put("B","ZU");
         map.put("C","Mi");
@@ -38,7 +39,6 @@ public class LettersConverter {
         map.put("Y","FU");
         map.put("Z","Z");
 
-
-        this.map = map;
+        return map;
     }
 }
