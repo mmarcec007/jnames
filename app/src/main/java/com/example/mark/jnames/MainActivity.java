@@ -30,11 +30,27 @@ public class MainActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
 
+            /**
+             * Triggers when the text is now changed.
+             *
+             * @param s
+             * @param start
+             * @param before
+             * @param count
+             */
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 determineJapaneseName(s, start, before, count);
             }
 
+            /**
+             * Replaces each letter with Japanese spelling of Japanese letter
+             *
+             * @param s
+             * @param start
+             * @param before
+             * @param count
+             */
             private void determineJapaneseName(CharSequence s, int start, int before, int count) {
                 if (s.length() != 0) {
                     String currentLetter = Character.toString(s.charAt(start + (count - 1))).toUpperCase();

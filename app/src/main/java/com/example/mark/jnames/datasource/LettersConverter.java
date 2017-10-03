@@ -9,6 +9,11 @@ import java.util.Map;
 
 public class LettersConverter {
 
+    /**
+     * Generates the japanese spelling map of the letters.
+     *
+     * @return map
+     */
     public static Map<String, String> generateLettersMap() {
         Map<String, String> map = new HashMap<>();
 
