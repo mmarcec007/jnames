@@ -68,7 +68,7 @@ public class TextFieldsComponent extends View {
                 }
 
                 else {
-                    resultName.setText("See your Japanese name: ");
+                    resultName.setText(" ");
                 }
             }
         });

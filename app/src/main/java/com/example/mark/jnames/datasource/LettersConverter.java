@@ -43,6 +43,7 @@ public class LettersConverter {
         map.put("X","NA");
         map.put("Y","FU");
         map.put("Z","Z");
+        map.put(" "," ");
 
         return map;
     }
